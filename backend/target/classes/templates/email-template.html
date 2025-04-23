@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            height: 100vh; /* Chiều cao của màn hình */
+        }
+        .email-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        .header {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .otp {
+            color: #ff5722;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #777;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="2" class="header">Chào bạn!</td>
+            </tr>
+            <tr>
+                <td colspan="2">Mã OTP của bạn là:</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="otp" th:text="${otp}"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Vui lòng nhập mã OTP để xác nhận.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">Nếu bạn không yêu cầu mã OTP, vui lòng bỏ qua email này.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
